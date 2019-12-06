@@ -1,0 +1,221 @@
+#!/bin/bash
+EDITOR=nano
+PASSWD=/etc/passwd
+RED='\033[0;41;30m'
+STD='\033[0;0;39m'
+
+pause(){
+  read -p "Press [Enter] key to continue..." fackEnterKey
+}
+
+
+# Hola mundo
+HolaMundo (){
+        /bin/bash script1.sh
+        pause
+}
+# Hola mundo variable
+HolaMundoVariable (){
+        /bin/bash script2.sh
+        pause
+}
+# Variables
+Variables (){
+        /bin/bash script3.sh
+        pause
+}
+# Arrays
+Arryas (){
+        /bin/bash script4.sh
+        pause
+}
+
+# Otros usos de arrays
+OtrosUsosdeArrays (){
+        /bin/bash script5.sh
+        pause
+}
+
+# Operaciones aritmeticas
+OperacionesAritmeticas (){
+        /bin/bash script6.sh
+        pause
+}
+
+# Operaciones logicas
+OperacionesLogicas (){
+        /bin/bash script7.sh
+        pause
+}
+
+# Condicionales
+Condicionales (){
+        /bin/bash script8.sh
+        pause
+}
+# Condicionales usos
+CondicionalesUsos (){
+        /bin/bash script9.sh
+        pause
+}
+
+# Case
+Case (){
+        /bin/bash script10.sh
+        pause
+}
+
+# Iteracciones for
+IteraccionesFor (){
+        /bin/bash script11.sh
+        pause
+}
+
+# Iteracciones while
+IteraccionesWhile (){
+        /bin/bash script12.sh
+        pause
+}
+
+# Iteracciones until
+IteraccionesUntil (){
+        /bin/bash script13.sh
+        pause
+}
+
+# Iteracciones select
+IteraccionesSelect (){
+        /bin/bash script14.sh
+        pause
+}
+
+# Funciones
+Funciones(){
+        /bin/bash script15.sh
+        pause
+}
+
+# Librerias
+Librerias (){
+        /bin/bash script16.sh
+        pause
+}
+
+# Señales
+Señales (){
+        /bin/bash script17.sh
+        pause
+}
+
+# Colores
+Colores (){
+        /bin/bash script18.sh
+        pause
+}
+
+# Navegar en carpetas
+NavegarenCarpetas (){
+        /bin/bash lab1.sh
+        pause
+}
+
+# Crear archivos
+CrearArchivos (){
+        /bin/bash lab2.sh
+        pause
+}
+
+# Copiar renombrar
+CopiarRenombrar (){
+        /bin/bash lab3.sh
+        pause
+}
+
+# Administrar procesos
+AdministrarProcesos (){
+        /bin/bash lab4.sh
+        pause
+}
+
+# Manipular
+ManipularArchivos (){
+        /bin/bash lab5.sh
+}
+
+
+
+show_menus() {
+        clear
+         echo "*************************************************"
+         echo "Menu"
+         echo "*************************************************"
+         echo "1.- Hola Mundo"
+         echo "2.- Hola Mundo (Variable)"
+         echo "3.- Variables"
+         echo "4.- Arrays"
+         echo "5.- Otros usos de Arrays"
+         echo "6.- Operaciones Aritmeticas"
+         echo "7.- Operaciones Logicas"
+         echo "8.- Condicionales"
+         echo "9.- Condicionales usos"
+         echo "10.- Case"
+         echo "11.- Iteracciones For"
+         echo "12.- Iteracciones While"
+         echo "13.- Iteracciones Until"
+         echo "14.- Iteracciones Select"
+         echo "15.- Funciones"
+         echo "16.- Librerias"
+         echo "17.- Señales"
+         echo "18.- Colores"
+         echo "19.- Comandos basicos para navegar en carpetas"
+         echo "20.- Crear archivos. desplegar su contenido y estadisticas"
+         echo "21.- Copiar, renombrar, borrar archivos"
+         echo "22.- Comandos basicos para administrar procesos"
+         echo "23.- Manipular o parsear contenido de archivos"
+         echo "24.- Exit"
+
+}
+read_options(){
+local choise
+read -p "Enter choice [ 1 - 24] " choice
+        case $choice in
+                1) HolaMundo ;;
+                2) HolaMundoVariable ;;
+                3) Variables ;;
+                4) Arrays ;;
+                5) OtrosUsosdeArrays ;;
+                6) OperacionesAritmeticas ;;
+                7) OperacionesLogicas ;;
+                8) Condicionales ;;
+                9) CondicionalesUsos ;;
+                10) Case ;;
+                11) IteraccionesFor ;;
+                12) IteraccionesWhile ;;
+                13) IteraccionesUntil ;;
+                14) IteraccionesSelect ;;
+                15) Funciones ;;
+                16) Librerias ;;
+                17) Señales ;;
+                18) Colores ;;
+                19) NavegarenCarpetas ;;
+                20) CrearArchivos ;;
+                21) CopiarRenombrar ;;
+                22) AdministrarProcesos ;;
+                23) ManipularArchivos ;;
+                24) exit 0;;
+*) echo -e "${RED}Error...${STD}" && sleep 2
+        esac
+}
+
+trap '' SIGINT SIGQUIT SIGTSTP
+
+while true
+do
+
+  show_menus
+        read_options
+done
+
+
+
+                                         

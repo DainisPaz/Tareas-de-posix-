@@ -1,0 +1,137 @@
+#!/bin/bash
+echo -n "MEMORAMA BASH"
+echo -e "\nRECUERDA MUUUUY BIEN LAS INSTRUCCIONES DEL JUEGO: En pantalla apareceran 16 comandos, trata de memorizar los comandos, cuando estes listo\ningresa la palabra: ya, para iniiciar a responder"
+echo -e "\nHola, para comenzar ingresa tu nombre: "
+read nombre
+echo -e "\nBienvenido $nombre Escribe start para iniciar el primer nivel: "
+read respuesta
+if [ $respuesta = "start" ]
+then
+        echo -e "\n************NIVEL 1************\n"
+        echo -e " 1.-clear  2.-mkdir   3.-pwd    4.-cd   5.-ln   6.-grep   7.-unzip  8.-cat\n  9.-tar  10.-cp   11.-rmp  12.-kill   13.-more    14.-chown   15.-date   16.-cmp"
+        echo -e "\n***************************\n"
+        echo -e "Cuando este listo escriba la palabra ya: "
+        read resp
+        if [ $resp = "ya" ]
+        then
+                clear
+                echo -n "Escribe el nombre de los comandos que recuerdes iniciaban con c en el orden en el que aparecian poniendo solo una coma entre cada palabra: "
+                read comandos
+                if [ $comandos = "clear,cd,cat,cp,chown,cmp" ]
+                then
+                        echo -n "Respuesta correcta pasas al siguiente nivel puntaje obtenido en este nivel: 10 puntos"
+                else
+                        echo -n "Pesima memoria a ver si tienes mejor suerte en el proximo nivel"
+
+                fi
+
+        fi
+
+
+
+        echo -e "\n************NIVEL 2************\n"
+        echo -e " 1.-ps  2.-tail   3.-pwd    4.-file   5.-ln   6.-telnet   7.-unzip  8.-cat\n  9.-tar  10.-cp   11.-rmp  12.-kill   13.-more    14.-chown   15.-date   16.-cmp"
+        echo -e "\n***************************\n"
+        echo -e "Cuando este listo escriba la palabra ya: "
+        read resp
+        if [ $resp = "ya" ]
+        then
+                clear
+                echo -n "Escribe el nombre de los comandos que recuerdes iniciaban con t en el orden en el que aparecian poniendo solo una coma entre cada palabra: "
+                read comandos1
+                if [ $comandos1 = "tail,telnet,tar" ]
+                then
+                        echo -n "Respuesta correcta pasas al siguiente nivel puntaje obtenido en este nivel: 10 puntos"
+                else
+                        echo -n "Pesima memoria a ver si tienes mejor suerte en el proximo nivel"
+
+                fi
+         fi
+
+
+        echo -e "\n************NIVEL 3************\n"
+        echo -e " 1.-clear  2.-who   3.-pwd    4.-cd   5.-sort   6.-grep   7.-unzip  8.-ps\n  9.-tar  10.-cp   11.-rmp  12.-ulimit   13.-pstree    14.-chown   15.-date   16.-cmp"
+        echo -e "\n***************************\n"
+        echo -e "Cuando este listo escriba la palabra ya: "
+        read resp
+        if [ $resp = "ya" ]
+        then
+                clear
+                echo -n "Escribe el nombre de los comandos que recuerdes iniciaban con p en el orden en el que aparecian poniendo solo una coma entre cada palabra: "
+                read comandos2
+                if [ $comandos2 = "pwd,ps,pstree" ]
+                then
+                        echo -n "Respuesta correcta pasas al siguiente nivel puntaje obtenido en este nivel: 10 puntos"
+                else
+                        echo -n "Pesima memoria a ver si tienes mejor suerte en el proximo nivel"
+
+                fi
+
+        fi
+
+
+        echo -e "\n************NIVEL 4************\n"
+        echo -e " 1.-rmdir  2.-mkdir   3.-rm    4.-history   5.-ln   6.-gunzip   7.-unzip  8.-cat\n  9.-tar  10.-rmmod   11.-rmp  12.-kill   13.-more    14.-chown   15.-date   16.-cmp"
+        echo -e "\n***************************\n"
+        echo -e "Cuando este listo escriba la palabra ya: "
+        read resp
+        if [ $resp = "ya" ]
+        then
+                clear
+                echo -n "Escribe el nombre de los comandos que recuerdes iniciaban con r en el orden en el que aparecian poniendo solo una coma entre cada palabra: "
+                read comandos
+                if [ $comandos = "rmdir,rm,rmmod,rmp" ]
+                then
+                        echo -n "Respuesta correcta pasas al siguiente nivel puntaje obtenido en este nivel: 10 puntos"
+                else
+                        echo -n "Pesima memoria a ver si tienes mejor suerte en el proximo nivel"
+
+                fi
+
+        fi
+        echo -e "\n************NIVEL 5************\n"
+        echo -e " 1.-clear  2.-adduser   3.-sysctl    4.-cd   5.-df   6.-grep   7.-ps  8.-cat\n  9.-lsmod  10.-wc   11.-vmstat  12.-free   13.-mesg    14.-wall   15.-date   16.-route"
+        echo -e "\n***************************\n"
+        echo -e "Cuando este listo escriba la palabra ya: "
+        read resp
+        if [ $resp = "ya" ]
+        then
+                clear
+                echo -n "Cuales de los comandos mostrados en pantalla pertenecen a los comandos basicos y manejo de ficheros, escribe la respuesta dejando una coma entre palabra: "
+                read comandos
+                if [ $comandos = "clear,cd,grep,cat,date" ]
+                then
+                        echo -n "Respuesta correcta pasas al siguiente nivel puntaje obtenido en este nivel: 10 puntos"
+                else
+                        echo -n "Pesima memoria a ver si tienes mejor suerte en el proximo nivel"
+
+                fi
+
+        fi
+
+
+        echo -e "\n************NIVEL 6************\n"
+        echo -e " 1.-clear  2.-mkdir   3.-pwd    4.-telnet   5.-ln   6.-grep   7.-unzip  8.-mail\n  9.-tar  10.-cp   11.-rmp  12.-ftp   13.-more    14.-chown   15.-date   16.-cmp"
+        echo -e "\n***************************\n"
+        echo -e "Cuando este listo escriba la palabra ya: "
+        read resp
+        if [ $resp = "ya" ]
+        then
+                clear
+                echo -n "Cuales comando de los visibilizados sirven para establecer comunicaciones, escribe la respuesta dejando una coma entre palabra "
+                read comandos
+                if [ $comandos = "telnet,mail,ftp" ]
+                then
+                        echo -n "Respuesta correcta! $nombre, gracias por jugar por el momento ha sido todo"
+                else
+                        echo -n "Respuesta incorrecta:( $nombre, por el momento ha sido todo sigue practicando"
+
+                fi
+
+        fi
+
+
+
+
+
+fi
